@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                echo "Iniciando construcción"
                 sh 'python hola.py'
+                echo "Finalizando construcción"
             }
         }
     }
