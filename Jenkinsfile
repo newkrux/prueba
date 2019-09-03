@@ -9,11 +9,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            steps {
-                pytest
-            }
-        }
-    }
 }
