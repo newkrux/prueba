@@ -8,9 +8,10 @@ pipeline {
                 echo "Finalizando construcción"
             }
         }
+        agent {docker { image 'qnib/pytest'} }
         stage('Test') {
             steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml test_sample.py'
+                sh 'pytest --verbose --junit-xml test-reports/results.xml test_sample.py'
             }
             post {
                 always {
