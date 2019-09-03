@@ -11,7 +11,9 @@ pipeline {
     }
     post {
         always {
-            pytest
+            steps {
+                pytest
+            }
         }
     }
 }
